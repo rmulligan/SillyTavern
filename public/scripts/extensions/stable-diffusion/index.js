@@ -2145,7 +2145,7 @@ async function generateAutoImage(prompt, negativePrompt) {
                 true, // 1 Enable ReActor
                 '0', // 2 Comma separated face number(s) from swap-source image
                 '0', // 3 Comma separated face number(s) for target image (result)
-                'C:\LocalAI\stable-diffusion-webui\models\insightface\inswapper_128.onnx', // 4 model path
+                'inswapper_128.onnx', // 4 model path
                 'CodeFormer', // 4 Restore Face: None; CodeFormer; GFPGAN
                 1, // 5 Restore visibility value
                 false, // 7 Restore face -> Upscale
