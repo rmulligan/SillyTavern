@@ -2148,9 +2148,9 @@ async function generateAutoImage(prompt, negativePrompt) {
                 'inswapper_128.onnx', // 4 model path
                 'CodeFormer', // 4 Restore Face: None; CodeFormer; GFPGAN
                 1, // 5 Restore visibility value
-                false, // 7 Restore face -> Upscale
-                'None', // 8 Upscaler (type 'None' if doesn't need), see full list here: http://127.0.0.1:7860/sdapi/v1/script-info -> reactor -> sec.8
-                1.5, // 9 Upscaler scale value
+                true, // 7 Restore face -> Upscale
+                'SwinIR_4x', // 8 Upscaler (type 'None' if doesn't need), see full list here: http://127.0.0.1:7860/sdapi/v1/script-info -> reactor -> sec.8
+                1, // 9 Upscaler scale value
                 1, // 10 Upscaler visibility (if scale = 1)
                 false, // 11 Swap in source image
                 true, // 12 Swap in generated image
@@ -2165,12 +2165,12 @@ async function generateAutoImage(prompt, negativePrompt) {
                 true, // 21 Face Mask Correction
                 1, // 22 Select Source, 0 - Image, 1 - Face Model, 2 - Source Folder
                 "Gabriela.safetensors", // 23 Filename of the face model (from "models/reactor/faces"), e.g. elena.safetensors, don't forger to set #22 to 1
-                "", // 24 The path to the folder containing source faces images, don't forger to set #22 to 2
+                null, // 24 The path to the folder containing source faces images, don't forger to set #22 to 2
                 'None', // 25 skip it for API
                 false, // 26 Randomly select an image from the path
                 false, // 27 Force Upscale even if no face found
                 0.6, // 28 Face Detection Threshold
-                2, // 29 Maximum number of faces to detect (0 is unlimited)
+                1, // 29 Maximum number of faces to detect (0 is unlimited)
             ]}},
 
             // Ensure generated img is saved to disk
